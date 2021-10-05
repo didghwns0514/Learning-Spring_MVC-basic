@@ -13,6 +13,7 @@
   - static/index.html 을 올려두면 Welcome page 기능을 제공한다.
   - **`Reference는 spring.io 에서 찾도록 하자(워낙 방대한 Spring이라서, 기본 사용법을 아는 것 외에, 검색 및 적용하는 능력이 중요함`**
     - [https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-welcome-page](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-welcome-page)
+  - [**`Static 파일로 제공하는 법`**](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-static-content)
 
 > Note : index.html은 정적 웹페이지 그냥 떤져준 것 <br>
 > 복잡한 page 제공을 위해(dynamic) Thymeleaf 기능 추가
