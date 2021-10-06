@@ -32,14 +32,13 @@ public class HelloController {
     @GetMapping(value = "hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam(name="name", required = false) String name) {
-        Hello hello = new Hello(name);
-        return hello; // 객체가 넘어가게 됨
+        return new Hello(name); // 객체가 넘어가게 됨
 
     }
 
-    class Hello{ // Static으로 선언하면
+    static class Hello{ // Static으로 선언하면 load되기 전에 Outer Class에서 먼저 사용할 수 있음
 
-        private String name;
+        private String name; // 이부분이 JSON의 값으로 나타남 -> {"name":null}
 
         public Hello(String name) {
             this.name = name;
