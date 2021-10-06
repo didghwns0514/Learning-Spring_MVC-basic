@@ -1,0 +1,8 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!-- hello! empty : 마크업, 디폴트 value, raw text로 보면 나타나는 값을 의미
+차후 서버를 통해 html을 받게 되면, th:text 값으로 해당 부분이 치환됨-->
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+
+</html>
