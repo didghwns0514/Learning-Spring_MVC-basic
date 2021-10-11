@@ -38,4 +38,12 @@ public class MemoryMemberRepository implements MemberRepository{
     public ArrayList<Member> findAll() {
         return new ArrayList<Member>(store.values());
     }
+
+    public static long getSequence() {
+        return sequence;
+    }
+
+    public void storeClear() {
+        store.clear();
+    }
 }
