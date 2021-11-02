@@ -4,11 +4,13 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Optional;
 
-@Component
+// @Component
+@Service // @Component에서 서비스로 변경
 @RequiredArgsConstructor
 public class MemberService {
     /**
@@ -20,6 +22,7 @@ public class MemberService {
      * - Service : Join, FindMembers
      * - Repository : save, findAll
      */
+    //인터페이스 안가져오고 구현체로 가져오는 것은 MemoryMemberRepository가 @Repository로 등록이 되어있기 때문
     private final MemberRepository memberRepository;
 
     // 회원가입, 중복 이름 제거(user_id라고 가정)
