@@ -3,6 +3,7 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -42,6 +43,11 @@ public class MemberService {
                 // isPresent 로 필요한 부분 검색해서 원하는 동작 구현 가능
                     .ifPresent(m -> {throw new IllegalStateException("이미 존재하는 회원 이름입니다.");
                 });
+    }
+
+    @Override
+    public String toString() {
+        return memberRepository.toString();
     }
 
     /**
