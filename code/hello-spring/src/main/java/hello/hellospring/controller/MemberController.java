@@ -28,8 +28,8 @@ public class MemberController {
 
     @PostMapping("members/new") // Get으로 보여주고 나서 Form 받을 때 사용 Post 주의
     public String create(MemberForm form) { // MemberForm으로 front 에서 form다 받아옴
-        Member member = new Member(form.getName()); // getName으로 설정
 
+        Member member = new Member(form.getName()); // getName으로 설정
         memberService.join(member); // 회원 등록 서비스 호출 -> exception 상황 있음
 
         System.out.println("Current memberService Status = \n" + memberService);
