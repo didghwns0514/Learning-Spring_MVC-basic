@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 // @Component
-@Service // @Component에서 서비스로 변경
+//@Service // @Component에서 서비스로 변경
 @RequiredArgsConstructor
 public class MemberService {
     /**
