@@ -21,9 +21,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// 테스트 롬복 적용
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testCompileOnly 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
 
 	// DB 연결위한 부분
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
