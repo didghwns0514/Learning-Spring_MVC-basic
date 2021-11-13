@@ -71,6 +71,7 @@ class MemberServiceIntegrationTest {
         IllegalStateException illegalStateException = assertThrows(IllegalStateException.class, () -> {
             memberService.join(memberD2);
         });
+
         org.assertj.core.api.Assertions.assertThat(illegalStateException.getMessage()).isEqualTo("이미 존재하는 회원 이름입니다.");
 
     }
