@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -13,6 +14,7 @@ import java.util.Optional;
 // @Component
 //@Service // @Component에서 서비스로 변경
 @RequiredArgsConstructor
+@Transactional
 public class MemberService {
     /**
      * > Service layer에서 "어떻게 처리할지"에 대한 세부 내용이 들어가주어야 함

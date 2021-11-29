@@ -30,7 +30,8 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
 
 	// DB 연결위한 부분
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// implementation 'org.springframework.boot:spring-boot-starter-jdbc' // jpa 위해서 지움 -> 내부에 jdbc 라이브러리 포함
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // jpa용 dependency 추가
 	runtimeOnly 'com.h2database:h2'
 }
 
